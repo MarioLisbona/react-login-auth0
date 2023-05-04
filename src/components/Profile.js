@@ -3,6 +3,7 @@ import React from "react";
 
 const Profile = () => {
   const { user, isAuthenticated } = useAuth0();
+
   return (
     isAuthenticated && (
       <article className="column">
