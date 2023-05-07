@@ -9,6 +9,7 @@ const LoginButton = () => {
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
   const clientSecret = process.env.REACT_APP_AUTH0_CLIENT_SECRET;
+  const redirectUri = process.env.REACT_APP_AUTH0_REDIRECT_URI;
 
   const data = {
     client_id: clientId,
@@ -18,6 +19,7 @@ const LoginButton = () => {
     send: "link",
     authParams: {
       scope: "openid",
+      redirect_uri: redirectUri,
     },
   };
 
